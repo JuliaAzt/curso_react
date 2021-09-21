@@ -1,0 +1,29 @@
+section.repository-list{
+    margin:40px;
+    
+    h1{
+        margin-bottom: 15px;
+        
+    }
+    ul{
+        
+        list-style: "📁";
+        li{
+            margin:5px;
+            //Toda li que for seguida de outra
+            & + li{
+                margin-top: 20px;
+            }
+            p{
+                
+                font: size 14px;
+                color: #121212;
+            }
+            a, a:visited, a:focus{
+
+                text-decoration: none;
+                color: blue;
+            }
+        }
+    }
+}
