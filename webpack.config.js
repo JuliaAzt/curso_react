@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode:'development',
@@ -13,6 +14,14 @@ module.exports = {
             '.jsx'
         ]
     },
+    plugins:[
+        
+        /* Gera o arquivo index.html na pasta dist, sem necessidade de fazer importação */
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname,'public', 'index.html')
+        })
+        
+    ],
     module: {
         rules: [
             {
