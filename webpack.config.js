@@ -14,13 +14,18 @@ module.exports = {
             '.jsx'
         ]
     },
+    devServer: {
+        /* Monitora os arquivos estatiscos pra caso haja alguma modificação */
+        /* usar static ao invés de contentBase */
+        static: path.resolve(__dirname,'public')
+    },
     plugins:[
         
         /* Gera o arquivo index.html na pasta dist, sem necessidade de fazer importação */
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname,'public', 'index.html')
         })
-        
+
     ],
     module: {
         rules: [
