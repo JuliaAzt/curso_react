@@ -1,5 +1,12 @@
+interface RepositoryItemProps{ // * Definir tipo apenas informações que vamos usar no componente
+    repository:{
+        name: string,
+        description: string,
+        html_url: string,
+    }
+}
 
-export function RepositoryItem(props){
+export function RepositoryItem(props: RepositoryItemProps){
     return(
         <li>
             <strong>{props.repository?.name ?? "Default"}</strong>
