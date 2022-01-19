@@ -3,7 +3,6 @@ import {Container, Content} from './styles'
 
 export function Header(){
     return (
-
         <Container>
             <Content>
                 <img src={logoImg} alt="dt money logo"/>
@@ -12,6 +11,5 @@ export function Header(){
                 </button>
             </Content>
         </Container>
-
     )
 }
